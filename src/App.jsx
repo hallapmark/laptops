@@ -4,6 +4,7 @@ import './App.css'
 import Avaleht from './pages/Avaleht'
 import VaataArvuteid from './pages/VaataArvuteid'
 import LisaArvuti from './pages/LisaArvuti'
+import Ostukorv from './pages/Ostukorv'
 
 function App() {
 
@@ -18,10 +19,14 @@ function App() {
       <Link to="/add">
         <button>Lisa sülearvuti</button>
       </Link>
+      <Link to="/cart">
+        <button>Ostukorv</button>
+      </Link>
       <Routes>
-        <Route path="" element={ <Avaleht /> } />
-        <Route path="all" element={ <VaataArvuteid /> } />
-        <Route path="add" element={ <LisaArvuti /> } />
+        <Route path="/" element={ <Avaleht /> } />
+        <Route path="/all" element={ <VaataArvuteid /> } />
+        <Route path="/add" element={ <LisaArvuti /> } />
+        <Route path="/cart" element={ <Ostukorv /> } />
       </Routes>
     </>
   )
